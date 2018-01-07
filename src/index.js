@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
+import YTSearch from 'youtube-api-search';
 
 const API_KEY = 'AIzaSyCb7XA6857qpeQ64M82AehbMq26o-nFYxU';
+
+YTSearch({ key: API_KEY, term: 'beyonce' }, function(data) {
+  console.log(data);
+});
+
 
 //Creating a component that is going to produce some html.
 const App = () => {
